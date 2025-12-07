@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простой статический сайт</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
+    <style>
+        /* Общие стили */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Стили для шапки */
+        header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+        
+        /* Стили для основного содержания */
+        main {
+            flex: 1;
+            padding: 50px 0;
+        }
+        
+        .content-section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 30px;
+        }
+        
+        .content-section h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f1f1f1;
+        }
+        
+        .content-section p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+        
+        .content-section ul {
+            padding-left: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .content-section li {
+            margin-bottom: 10px;
+        }
+        
+        .content-section .highlight {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #6a11cb;
+            margin: 25px 0;
+        }
+        
+        /* Стили для футера */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        
+        footer .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        footer .footer-links a {
+            color: #ecf0f1;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        footer .footer-links a:hover {
+            color: #6a11cb;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            
+            header p {
+                font-size: 1rem;
+                padding: 0 15px;
+            }
+            
+            .content-section {
+                padding: 25px;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <h1>Добро пожаловать на наш сайт</h1>
+            <p>Простой, аккуратный и читаемый статический сайт, созданный с использованием HTML и CSS</p>
+        </div>
+    </header>
+    
+    <!-- Основное содержание -->
+    <main>
+        <div class="container">
+            <section class="content-section">
+                <h2>О нашем сайте</h2>
+                <p>Этот сайт представляет собой пример статической веб-страницы, созданной с использованием только HTML и CSS. Все стили находятся в одном файле, что делает его простым в развертывании и обслуживании.</p>
+                
+                <div class="highlight">
+                    <p>Статические сайты отлично подходят для проектов, которые не требуют динамического контента или взаимодействия с базами данных. Они быстро загружаются, безопасны и легко индексируются поисковыми системами.</p>
+                </div>
+                
+                <p>Мы использовали современные подходы к веб-дизайну, чтобы сделать сайт привлекательным и удобным для пользователей на всех устройствах.</p>
+            </section>
+            
+            <section class="content-section">
+                <h2>Преимущества нашего подхода</h2>
+                <ul>
+                    <li><strong>Простота:</strong> Все содержимое находится в одном файле</li>
+                    <li><strong>Скорость:</strong> Быстрая загрузка благодаря минималистичному дизайну</li>
+                    <li><strong>Адаптивность:</strong> Сайт отлично выглядит на всех устройствах</li>
+                    <li><strong>Читаемость:</strong> Оптимальная типографика и контрастность</li>
+                    <li><strong>Профессиональный внешний вид:</strong> Современный дизайн с аккуратными элементами</li>
+                </ul>
+                
+                <p>Создание статических сайтов - это отличный способ быстро запустить проект без необходимости сложной настройки серверной части. Такой подход идеально подходит для портфолио, лендингов, документации и небольших бизнес-сайтов.</p>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Простой статический сайт. Все права защищены.</p>
+            <p>Этот сайт является примером использования HTML и CSS в одном файле.</p>
+            <div class="footer-links">
+                <a href="#">Главная</a>
+                <a href="#">О нас</a>
+                <a href="#">Контакты</a>
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
